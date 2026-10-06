@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class RoomTypesConfig(AppConfig):
-    name = 'room_types'
+    name = 'src.room_types'
