@@ -1,0 +1,25 @@
+{
+  "name": "hestia",
+  "version": "1.0.0",
+  "description": "Hestia is a room reservation system built with Django and PostgreSQL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./static/css/app.css -o ./static/css/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./static/css/app.css -o ./static/css/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andersoncrs5/hestia.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Andersoncrs5/hestia/issues"
+  },
+  "homepage": "https://github.com/Andersoncrs5/hestia#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
