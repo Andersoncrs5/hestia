@@ -1,9 +1,12 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
@@ -13,34 +16,114 @@
         {% block title %}Hestia{% endblock %}
     </title>
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+
+    <link
+        href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700"
+        rel="stylesheet"
+    >
+
+    <!-- FontAwesome -->
+    <link
+        rel="stylesheet"
+        href="{% static 'fontawesome-free-6.7.2-web/css/all.min.css' %}"
+    >
+
+    <!-- Tailwind -->
     <link
         rel="stylesheet"
         href="{% static 'css/output.css' %}"
     >
 
-    {% block styles %}{% endblock %}
-</head>
+    <!-- Alpine.js -->
+    <script
+        defer
+        src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
 
-<body class="min-h-screen bg-gray-50 text-gray-900">
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
 
-    {% block nav %}
+    {% block styles %}
     {% endblock %}
 
-    <main class="mx-auto max-w-7xl px-6 py-8">
+</head>
 
-        {% block header %}
+
+<body class="relative h-screen overflow-hidden bg-black font-sans text-white antialiased">
+
+
+    <!-- Background -->
+
+    <div class="fixed inset-0" style="z-index: 0;">
+
+        <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="absolute inset-0 h-full w-full object-cover"
+        >
+            <source
+                src="{% static 'videos/singularity-cosmic-vortex-moewalls-com.mp4' %}"
+                type="video/mp4"
+            >
+        </video>
+
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+
+    </div>
+
+
+    <!-- Application -->
+
+    <div class="relative flex h-full flex-col" style="z-index: 10;">
+
+        <!-- Navbar -->
+
+        {% block nav %}
+            {% include "navbar.html" %}
         {% endblock %}
 
-        {% block content %}
-        {% endblock %}
+
+        <!-- Alerts -->
+
+        {% include "alert.html" %}
+
+
+        <!-- Main -->
+
+        <main class="flex flex-1 items-center justify-center px-6">
+
+            {% block content %}
+            {% endblock %}
+
+        </main>
+
+
+        <!-- Footer -->
 
         {% block footer %}
+
+            <footer class="shrink-0 py-6 text-center text-sm text-gray-400">
+
+                &copy; {% now "Y" %} Hestia. Todos os direitos reservados.
+
+            </footer>
+
         {% endblock %}
 
-    </main>
+
+    </div>
+
 
     {% block scripts %}
     {% endblock %}
 
 </body>
+
 </html>

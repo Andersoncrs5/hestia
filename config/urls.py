@@ -20,7 +20,7 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import path
 
-from src.auth.views import home
+from src.main.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),

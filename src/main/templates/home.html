@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Welcome - Hestia
+{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="flex w-full items-center justify-center">
+
+        <div
+            class="w-full max-w-2xl rounded-2xl border border-white/20 bg-white/10 p-8 text-center shadow-2xl backdrop-blur-xl sm:p-12"
+        >
+
+            <p class="text-sm font-semibold uppercase tracking-widest text-gray-300">
+                Hestia
+            </p>
+
+            <h1
+                class="mt-4 text-4xl font-extrabold tracking-tight text-white drop-shadow-md sm:text-6xl"
+            >
+                Welcome to Hestia
+            </h1>
+
+            <p
+                class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-gray-200 sm:text-lg"
+            >
+                A simple and modern room reservation system.
+                Find rooms, check availability and manage your reservations
+                in one place.
+            </p>
+
+            <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+
+                <a
+                    href="/login/"
+                    class="rounded-xl bg-white px-8 py-3.5 font-bold text-gray-900 shadow-xl transition hover:bg-gray-100 active:scale-95"
+                >
+                    Login
+                </a>
+
+                <a
+                    href="/register/"
+                    class="rounded-xl border border-white/30 bg-white/10 px-8 py-3.5 font-semibold text-white backdrop-blur-md transition hover:bg-white/20 active:scale-95"
+                >
+                    Register
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
