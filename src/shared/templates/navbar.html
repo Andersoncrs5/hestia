@@ -1,0 +1,12 @@
+{% load permissions %}
+
+{% can "room.list" %}
+
+    <a
+        href="/rooms/"
+        class="text-sm font-medium text-gray-600 transition hover:text-gray-900"
+    >
+        Rooms
+    </a>
+
+{% endcan %}

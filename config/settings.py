@@ -62,6 +62,8 @@ INSTALLED_APPS = [
     "src.permissions.apps.PermissionsConfig",
     "src.permissionsUser.apps.PermissionsuserConfig",
     "src.reservations.apps.ReservationsConfig",
+
+    "src.auth.apps.ReservationsConfig",
 ]
 
 
@@ -176,3 +178,8 @@ MAILERS = {
     },
 }
 
+STATIC_URL = "static/"
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
